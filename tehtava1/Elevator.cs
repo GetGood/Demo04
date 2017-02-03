@@ -10,7 +10,11 @@ namespace tehtava1
     {
         private readonly int maxFloor = 6, minFloor = 1;
 
-        private int floor;
+        private int floor = 1;
+        public void PrintFloor()
+        {
+            Console.WriteLine("Elevator is now on floor: " + Floor);
+        }
         public int Floor
         {
             get
@@ -19,13 +23,26 @@ namespace tehtava1
             }
             set
             {
-                if (value <= maxFloor && value >= minFloor) floor = value;
-                else
-                {
-                    Console.WriteLine("No more rooms");
+                if (value >= maxFloor)
+                    {
+                    Console.WriteLine("Floor 6 is the top floor");
                     floor = maxFloor;
-                }
+                    }
+                else if (value <=minFloor)
+                    {
+                    Console.WriteLine("Floor 1 is the bottom floor");
+                    floor = minFloor;
+                    }
+                else
+                    {
+                    floor = value;
+                    }
+            
+                
             }
-        }
+                
+         }
+
+        
     }
 }
