@@ -24,11 +24,10 @@ namespace tehtava3
             FirstName = firstName;
             LastName = lastName;
         }
+        
 
-        // just one method what Person can do
 
-
-        // return Person data as a one string, override Object class ToString()-method
+        // return Employee data as a one string, override Object class ToString()-method
         public override string ToString()
         {
             return FirstName + " " + LastName + " Profession:" + Profession + " Salary:" + Salary;

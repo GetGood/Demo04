@@ -22,15 +22,12 @@ namespace tehtava3
             Car = car;
         }
 
-        // just one method what Teacher can do 
-
 
         // override base class ToString()-method
         public override string ToString()
         {
-            // Person-luokan ToString + Room
-            // firstName + lastName ... + Room
-            // base viittaa yliluokkaan eli nyt Person-luokkaan
+            // Employee-luokan ToString + Car + Bonus
+            // firstName + lastName ... + Car + Bonus
             return base.ToString() + " Car:" + Car + " Bonus:" + Bonus;
         }
     }
