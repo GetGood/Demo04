@@ -15,13 +15,31 @@ namespace tehtava5
             radio.PrintFreguency();
             radio.Volume = 6;
             radio.PrintVolume();
-            Console.WriteLine("Type 1 to adjust volume, 2 to adjust freguency 0 to turn on/off, 4 to exit");
-            string line = Console.ReadLine();
-            int choice;
-            bool result = int.TryParse(line, out choice);
-
+            int choice = 5;
+            while (choice != 4)
+            {
+                Console.WriteLine("Type 1 to adjust volume, 2 to adjust freguency 0 to turn on/off, 4 to exit");
+                string line = Console.ReadLine();
+               // int choice;
+                bool result = int.TryParse(line, out choice);
                 switch (choice)
                 {
+                    case 1:
+                        while (true)
+                        {
+                            Console.Write("give a new volume (1-9) type 0 to exit > ");
+                            string line2 = Console.ReadLine();
+                            int number;
+                            bool result2 = int.TryParse(line2, out number);
+                            if (number == 0)
+                            {
+                                break;
+                            }
+                            radio.Volume = number;
+                            radio.PrintVolume();
+
+                        }
+                        break;
                     case 2:
 
                         while (true)
@@ -39,9 +57,13 @@ namespace tehtava5
 
                         }
                         break;
+                    case 0:
+                        radio.TurnOnOff();
+                        radio.PrintOnOff();
+                        break;
                 }
-            
-            
+
+            }
    
         Console.ReadLine();
 

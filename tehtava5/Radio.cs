@@ -12,7 +12,7 @@ namespace tehtava5
         private readonly double maxFreg = 26000, minFreg = 2000;
         private int volume = 1;
         private double freg;
-        public bool GearWheels { get; set; }
+        public bool OnOff { get; set; }
         public void PrintVolume()
         {
             Console.WriteLine("The volume is set to " + Volume);
@@ -20,6 +20,20 @@ namespace tehtava5
         public void PrintFreguency()
         {
             Console.WriteLine("The freguency is set to " + Freg);
+        }
+        public void TurnOnOff()
+        {
+            if (OnOff == true)
+            {
+                OnOff = false;
+            }
+            else OnOff = true;
+
+        }
+        public void PrintOnOff()
+        {
+            if (OnOff == true) Console.WriteLine("the radio is on ");
+            else Console.WriteLine("the radio is off ");
         }
         public int Volume
         {
