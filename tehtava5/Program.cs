@@ -11,13 +11,12 @@ namespace tehtava5
         static void Main(string[] args)
         {
             Radio radio = new Radio();
-            radio.PrintVolume();
-            radio.PrintFreguency();
-            radio.Volume = 6;
-            radio.PrintVolume();
             int choice = 5;
             while (choice != 4)
             {
+                radio.PrintOnOff();
+                radio.PrintVolume();
+                radio.PrintFreguency();
                 Console.WriteLine("Type 1 to adjust volume, 2 to adjust freguency 0 to turn on/off, 4 to exit");
                 string line = Console.ReadLine();
                // int choice;
