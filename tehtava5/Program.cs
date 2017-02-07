@@ -14,9 +14,11 @@ namespace tehtava5
             int choice = 5;
             while (choice != 4)
             {
+                Console.WriteLine("");
                 radio.PrintOnOff();
                 radio.PrintVolume();
                 radio.PrintFreguency();
+                Console.WriteLine("");
                 Console.WriteLine("Type 1 to adjust volume, 2 to adjust freguency 0 to turn on/off, 4 to exit");
                 string line = Console.ReadLine();
                // int choice;
@@ -58,7 +60,7 @@ namespace tehtava5
                         break;
                     case 0:
                         radio.TurnOnOff();
-                        radio.PrintOnOff();
+                        //radio.PrintOnOff();
                         break;
                 }
 
